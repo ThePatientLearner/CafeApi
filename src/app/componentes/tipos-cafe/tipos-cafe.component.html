@@ -1,0 +1,26 @@
+<app-nav></app-nav>
+
+@if (tiposCafe) {
+<div class="row my-3 justify-content-center text-center">
+
+    @for( cafe of tiposCafe; track $index){
+    <div class="col-3 my-3">
+        <a href="/tipos_de_cafe/{{ cafe.id }}">
+            <div class="card" style="width: 18rem;">
+                <img id="imagenCafes" class="card-img-top" [src]="cafe.image" alt="Imagen de {{ cafe.title }}">
+                <div class="card-body">
+                    <h5 id="cardTitle" class="card-title">{{ cafe.title }}</h5>
+                    <!-- <p class="card-text">description: {{ cafe.description }}</p>
+                <p id="x" class="card-text">Ingredientes: {{ cafe.ingredients .join(', ') }}</p>-->
+                    <!--devuelve los ingredientes separados por coma-->
+                    <!--<a href="#" class="btn btn-primary">Ver más</a> POR SI LUEGO QUIERO UN BOTÓN>-->
+                </div>
+            </div>
+        </a>
+    </div>
+    }
+
+
+
+</div>
+}

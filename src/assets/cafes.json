@@ -1,0 +1,86 @@
+[
+    {
+      "cafeteria": "Café Parisien",
+      "ciudad": "París",
+      "cafes": [
+        {
+          "nombre": "Café Croissant",
+          "sabor": "suave y mantecoso",
+          "cafeina": 0.6,
+          "ingredientes": ["espresso", "leche", "jarabe de almendra", "esencia de vainilla"],
+          "imagen": "assets/cafesImg/parisvainilla.jpeg"
+        },
+        {
+          "nombre": "Café Macaron",
+          "sabor": "dulce y afrutado",
+          "cafeina": 0.4,
+          "ingredientes": ["espresso", "leche", "jarabe de fresa", "polvo de macaron"],
+          "imagen": "assets/cafesImg/Parismacaron.jpeg"
+        }
+      ],
+      "id" : 0
+    },
+    {
+      "cafeteria": "Café Nippon",
+      "ciudad": "Tokio",
+      "cafes": [
+        {
+          "nombre": "Café Sakura",
+          "sabor": "floral y delicado",
+          "cafeina": 0.5,
+          "ingredientes": ["espresso", "leche de soja", "jarabe de flor de cerezo", "pétalos de sakura"],
+          "imagen": "assets/cafesImg/japoncerezos.jpeg"
+        },
+        {
+          "nombre": "Café Matcha",
+          "sabor": "herbáceo y cremoso",
+          "cafeina": 0.3,
+          "ingredientes": ["espresso", "leche", "polvo de matcha", "jarabe de vainilla"],
+          "imagen": "assets/cafesImg/japonmatch.jpeg"
+        }
+      ],
+      "id" : 1
+    },
+    {
+      "cafeteria": "Café Azteca",
+      "ciudad": "Ciudad de México",
+      "cafes": [
+        {
+          "nombre": "Café Xocolatl",
+          "sabor": "chocolate y especias",
+          "cafeina": 0.7,
+          "ingredientes": ["espresso", "leche", "chocolate mexicano", "canela", "chili en polvo"],
+          "imagen": "assets/cafesImg/mexicoazteca.jpeg"
+        },
+        {
+          "nombre": "Café Horchata",
+          "sabor": "dulce y especiado",
+          "cafeina": 0.4,
+          "ingredientes": ["espresso", "leche de arroz", "jarabe de canela", "extracto de vainilla"],
+          "imagen": "assets/cafesImg/mexico2.jpeg"
+        }
+      ],
+      "id" : 2
+    },
+    {
+      "cafeteria": "Café Cairo",
+      "ciudad": "El Cairo",
+      "cafes": [
+        {
+          "nombre": "Café Cleopatra",
+          "sabor": "exótico y aromático",
+          "cafeina": 0.6,
+          "ingredientes": ["espresso", "leche", "jarabe de dátil", "cardamomo", "agua de rosas"],
+          "imagen": "assets/cafesImg/egiptopetalos.jpeg"
+        },
+        {
+          "nombre": "Café Nilo",
+          "sabor": "fuerte y terroso",
+          "cafeina": 0.8,
+          "ingredientes": ["espresso", "leche", "jarabe de higo", "nuez moscada", "polvo de cacao"],
+          "imagen": "assets/cafesImg/giptocairo.jpeg"
+        }
+      ],
+      "id" : 3
+    }
+  ]

@@ -1,0 +1,51 @@
+<app-nav></app-nav>
+@if(cafeteria) {
+<div class="row my-3 justify-content-around text-center">
+
+
+
+
+
+    @for( cf of cafeteria; track $index) {
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body d-flex justify-content-center align-items-center">
+                <div class="text-center me-5">
+                    <h2>{{ cf.cafeteria }}</h2>
+                    <p>Ciudad: {{ cf.ciudad }}</p>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="text-center">
+                    @for(tiempo of tiempoReal; track $index) {
+                    @if($index == cf.id){
+                    <h5>Hora Local: {{tiempo.current.time.substring(tiempo.current.time.length - 5) }}</h5>
+                    <p>Temperatura:{{tiempo.current.temperature_2m }} °C</p>
+                    <p>¿Llueve ahora?: {{tiempo.current.rain > 0 ? 'Sí' : 'No' }}</p>
+                    <p>Velocidad del viento: {{tiempo.current.wind_speed_10m }} km/h</p>
+                    <p>Probabilidad de lluvia mañana a 12:00 pm: <br>{{tiempo.hourly.precipitation_probability[12]}}%</p>
+                    }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row justify-content-center mb-5">
+        @for( cafe of cf.cafes; track $index) {
+        <div class="col-3 my-3">
+            <div class="card" style="width: 18rem;">
+                <img id="imagenCafes" class="card-img-top" [src]="cafe.imagen" alt="Imagen de {{ cafe.nombre }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ cafe.nombre }}</h5>
+                    <p class="card-text">Sabor: {{ cafe.sabor }}</p>
+                    <p class="card-text">Cafeína: {{ cafe.cafeina }}</p>
+                    <p id="x" class="card-text">Ingredientes: {{ cafe.ingredientes.join(', ') }}</p>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+    }
+</div>
+}

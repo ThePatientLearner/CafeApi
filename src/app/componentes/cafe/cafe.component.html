@@ -1,0 +1,31 @@
+<app-nav></app-nav>
+
+@if (cafe) {
+    
+  @for( cafeTraducido of arrayCafes; track $index) {
+  
+    @if(cafeTraducido.id == cafe.id) {
+      <div class="row justify-content-center">
+        <div class="col-md-9">
+          <div class="card my-5">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img id="imagenCafe" class="img-fluid rounded-start" [src]="cafe.image" alt="Imagen de {{ cafe.title }}">
+              </div>
+              <div class="col-md-8 d-flex align-items-center">
+                <div class="card-body text-center">
+                  <button type="button" class="btn btn-outline-dark mb-5" (click)="cambiarCafe(cafeTraducido.id - 1)">Anterior</button>
+                  <h2 class="card-title mt-3">{{ cafe.title }}</h2>
+                  <p class="card-text px-4" translate>{{ cafeTraducido.description }}</p>
+                  <p id="x" class="card-text px-4 mb-5" translate>Ingredientes: {{ cafeTraducido.ingredients.join(', ') }}</p>
+                  <button type="button" class="btn btn-outline-dark mt-4" (click)="cambiarCafe(cafeTraducido.id + 1)">Siguiente</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  }
+  
+}
